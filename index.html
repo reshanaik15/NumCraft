@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <title>Num Craft</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stylesheet/header.css" />
+    <link rel="stylesheet" href="stylesheet/footer.css" />
+    <style>
+      body {
+        background-image: url("img/bgg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        font-size: 220px;
+        text-align: center;
+        padding-top: 150px;
+      }
+      img {
+        width: 100%;
+      }
+      .carousel-caption {
+        background: rgba(128, 55, 55, 0.5);
+        padding: 10px;
+      }
+      .carousel-item {
+        height: 500px;
+      }
+      .carousel-item img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .carousel-caption::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        z-index: -1;
+        filter: blur(10px);
+        margin: -20px;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: #ff5055;
+        background-size: 100%;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      table caption {
+        caption-side: top;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+      }
+      table a {
+        text-decoration: underline;
+        color: inherit;
+      }
+
+      table a:hover {
+        text-decoration: none; /* Ensures no underline on hover */
+        color: rgb(50, 5, 5); /* Keeps color the same on hover */
+      }
+      table caption::before {
+        content: "";
+        display: inline-block;
+        background: url("img/pseudo.png") no-repeat center;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="d-flex align-items-center fixed-top">
+        <img src="img/logo.webp" alt="Logo" class="logo" />
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about_us.html">About Us</a>
+          <a href="reg.html">Form</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="main">
+        <h1>Num Craft!</h1>
+      </div>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mx-auto">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+              <!-- Indicators/dots -->
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="4"
+                ></button>
+              </div>
+
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="add.html"
+                    ><img
+                      src="img/add.png"
+                      alt="add"
+                      class="d-block"
+                      style="width: 100%"
+                  /></a>
+                  <div class="carousel-caption">
+                    <h3>Addition</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="sub.html"
+                    ><img
+                      src="img/sub.png"
+                      alt="sub"
+                      class="d-block"
+                      style="width: 100%"
+                  /></a>
+                  <div class="carousel-caption">
+                    <h3>Subtraction</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="mul.html"
+                    ><img
+                      src="img/mul.png"
+                      alt="mul"
+                      class="d-block"
+                      style="width: 100%"
+                  /></a>
+                  <div class="carousel-caption">
+                    <h3>Multiplication</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="div.html"
+                    ><img
+                      src="img/div.png"
+                      alt="div"
+                      class="d-block"
+                      style="width: 100%"
+                  /></a>
+                  <div class="carousel-caption">
+                    <h3>Division</h3>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="fact.html"
+                    ><img
+                      src="img/fact.png"
+                      alt="div"
+                      class="d-block"
+                      style="width: 100%"
+                  /></a>
+                  <div class="carousel-caption">
+                    <h3>Factorial</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Left and right controls/icons -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5" style="max-width: 1000px">
+        <table class="table table-striped">
+          <caption>
+            Formulas!
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Sr.No.</th>
+              <th scope="col">Operation</th>
+              <th scope="col">Formula</th>
+              <th scope="col">Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-success">
+              <th scope="row">1</th>
+              <td><a href="add.html">Addition</a></td>
+              <td>A + B</td>
+              <td>5 + 3 = 8</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td><a href="sub.html">Subtraction</a></td>
+              <td>A - B</td>
+              <td>5 - 3 = 2</td>
+            </tr>
+            <tr class="table-primary">
+              <th scope="row">3</th>
+              <td><a href="mul.html">Multiplication</a></td>
+              <td>A × B</td>
+              <td>5 × 3 = 15</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td><a href="div.html">Division</a></td>
+              <td>A ÷ B</td>
+              <td>6 ÷ 3 = 2</td>
+            </tr>
+            <tr class="table-warning">
+              <th scope="row">5</th>
+              <td><a href="fact.html">Factorial</a></td>
+              <td>N!</td>
+              <td>5! = 120</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <table>
+        <tr>
+          <th colspan="2">Contact Us</th>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>sakec@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Mobile No.</td>
+          <td>9393924242</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

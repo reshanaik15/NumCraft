@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Num Craft - Registration Form</title>
+    <link rel="stylesheet" href="stylesheet/header.css" />
+    <link rel="stylesheet" href="stylesheet/footer.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5e7e7;
+        margin: 0;
+        padding: 0; /* Removed the padding at the top */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center horizontally */
+        min-height: 100vh; /* Full viewport height */
+        justify-content: center; /* Center vertically */
+        background-image: url("img/bgg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 10%;
+      }
+
+      .header {
+        width: 100%;
+        background-color: #644208; /* Your header color */
+        padding: 10px 0;
+        text-align: center; /* Center the text */
+        position: relative; /* Keep it above the content */
+        z-index: 1000; /* Ensure it stays on top */
+      }
+
+      .container {
+        background-color: #debf72; /* New background color matching the color palette */
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0 2px 10px rgba(87, 61, 61, 0.1);
+        width: 350px; /* Fixed width */
+        margin-top: 20px; /* Space between header and container */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically in the container */
+        align-items: center; /* Center elements horizontally in the container */
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #644208; /* Matching color with header background */
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        width: 100%; /* Full width for form groups */
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* Radio buttons styling for horizontal display */
+      .form-group.gender-group {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center radio buttons horizontally */
+      }
+
+      .form-group.gender-group label {
+        margin: 0 10px 0 0;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      .error {
+        color: red;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .footer {
+        width: 100%;
+        text-align: center; /* Center footer text */
+        margin-top: 20px; /* Space above footer */
+      }
+
+      table {
+        margin: 0 auto; /* Center the table */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="d-flex justify-content-center fixed-top">
+        <img src="img/logo.webp" alt="Logo" class="logo" />
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="reg.html">Register</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h1>Register for Num Craft</h1>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name"><b>Full Name:</b></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Write your name here..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="age"><b>Age (3+):</b></label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="3"
+            max="120"
+            placeholder="Age"
+            required
+          />
+        </div>
+
+        <!-- Gender Section with Horizontal Radio Buttons -->
+        <div class="form-group gender-group">
+          <label for="gender"><b>Gender:</b></label>
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label>
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+          <input type="radio" id="other" name="gender" value="Other" />
+          <label for="other">Other</label>
+        </div>
+
+        <div class="form-group">
+          <label for="education"><b>Educational Level:</b></label>
+          <select id="education" name="education" required>
+            <option value="" disabled selected>Select your level</option>
+            <option value="school">School Student</option>
+            <option value="college">College Student</option>
+            <option value="graduate">Graduate</option>
+            <option value="post-graduate">Post Graduate</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="interests"><b>Area of Interest in Math:</b></label>
+          <input
+            type="text"
+            id="interests"
+            name="interests"
+            placeholder="e.g., Algebra, Geometry"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email"><b>Email:</b></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password"><b>Password:</b></label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password"><b>Confirm Password:</b></label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+          <div class="error" id="confirmError">Passwords do not match!</div>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get values
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
+          const confirmError = document.getElementById("confirmError");
+
+          // Clear previous error
+          confirmError.style.display = "none";
+
+          // Validate passwords
+          if (password !== confirmPassword) {
+            confirmError.style.display = "block"; // Show error if passwords do not match
+            return; // Stop the form from submitting
+          }
+
+          // If validation passes, submit or show success message
+          alert("Registration successful!");
+        });
+    </script>
+
+    <div class="footer">
+      <table>
+        <tr>
+          <th colspan="2">Contact Us</th>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>sakec@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Mobile No.</td>
+          <td>9393924242</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

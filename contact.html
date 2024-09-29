@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <title>Contact Us - Num Craft</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="stylesheet/header.css" />
+    <link rel="stylesheet" href="stylesheet/footer.css" />
+    <style>
+      .contact-us {
+        text-align: center;
+        margin-top: 100px;
+        padding: 40px;
+      }
+      .contact-us h1 {
+        font-size: 3rem;
+        color: #644208;
+      }
+      .contact-us p {
+        font-size: 1.25rem;
+        color: #333;
+        line-height: 1.8;
+      }
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #cdb284;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="d-flex align-items-center fixed-top">
+        <img src="img/logo.webp" alt="Logo" class="logo" />
+        <a href="index.html">Home</a>
+        <a href="sudo.html">About Us</a>
+        <a href="reg.html">Form</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="container contact-us">
+      <h1>Contact Us</h1>
+      <p>
+        Have a question or want to get in touch? We'd love to hear from you!
+        Feel free to reach out using the contact form below or by emailing us
+        directly.
+      </p>
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <table>
+        <tr>
+          <th colspan="2">Contact Us</th>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>sakec@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Mobile No.</td>
+          <td>9393924242</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          alert("Your message has been successfully sent!");
+          // Optionally, clear the form fields after submission
+          document.getElementById("contactForm").reset();
+        });
+    </script>
+  </body>
+</html>
